@@ -67,9 +67,9 @@
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(m => m.BirthDate, new { @class = "col-md-2 control-label" })
+        @Html.LabelFor(m => m.BirthDate, "Birth Date and Time", new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
-            @Html.TextBoxFor(m => m.BirthDate, new { @class = "form-control", @id = "birthDatePicker" })
+            @Html.TextBoxFor(m => m.BirthDate, new { @class = "form-control", @id = "birthDateTimePicker" })
         </div>
     </div>
 
@@ -84,8 +84,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
-        flatpickr("#birthDatePicker", {
-            dateFormat: "Y-m-d", // ISO date format
+        flatpickr("#birthDateTimePicker", {
+            enableTime: true,
+            dateFormat: "Y-m-d H:i:S", // Format to include both date and time with seconds
+            time_24hr: true, // Use 24-hour format
+            enableSeconds: true // Enable seconds input
         });
     </script>
 }
