@@ -1,0 +1,4 @@
+Enter PDB name:
+us cities
+Creating with PDB name--(US_CITIES) and PDB admin--(US_CITIES)
+Pluggable Database created successfully!
